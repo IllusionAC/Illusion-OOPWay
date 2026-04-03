@@ -3,6 +3,7 @@ local Module = {}
 -- Define the constructor type, name it whatever you like (be careful with existing types)
 export type Object = {
 	attribute: boolean,
+	-- Make sure the first parameter of each method is the constructor type, here it's named self, but they can all be named differently (even with a _)
 	setAttribute: (self: Object, state: boolean) -> (),
 	getAttribute: (self: Object) -> (boolean),
 }
